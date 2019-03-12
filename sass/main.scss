@@ -1,7 +1,9 @@
-/* Format reset */
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-}
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "pages/home";
