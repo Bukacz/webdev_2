@@ -1,2 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,700,900");
+
+body {
+    font-family: 'Raleway', 'Arial', 'Sans-serif';
+    font-size: 1.7rem;
+    text-decoration: none;
+    overflow-x: hidden;
+    line-height: 1.5;
+    color: $color-primary-dark;
+}
+
+.text-white {
+    color: $color-primary-light;
+}
+
+.text-gray {
+    color: $color-secondary-dark;
+}
+
+.text-red {
+    color: $color-of-love;
+}

@@ -1,3 +1,4 @@
+/* ------------------- COLORS ------------------- */
 /* Format reset */
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,700,900");
@@ -12,5 +13,42 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box;
-  padding: 3rem; }
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Raleway', 'Arial', 'Sans-serif';
+  font-size: 1.7rem;
+  text-decoration: none;
+  overflow-x: hidden;
+  line-height: 1.5;
+  color: #262626; }
+
+.text-white {
+  color: #ffffff; }
+
+.text-gray {
+  color: #b9b9b9; }
+
+.text-red {
+  color: #ff2b58; }
+
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: url("../../img/hero.png") no-repeat center;
+  background-size: 100%; }
+
+.footer {
+  background-color: #262626; }
+
+.section-about {
+  background-image: radial-gradient(#00c3c3, #00aeae); }
+
+.section-services {
+  background-color: #70bfff; }
+
+.section-gallery {
+  background-color: #ffe92f; }
+
+.section-blog {
+  background-color: #b07cf7; }
