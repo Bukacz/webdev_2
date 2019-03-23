@@ -13,7 +13,14 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow-x: hidden; }
+
+.gallery__img {
+  width: 100%; }
+
+.image__content {
+  width: 100%; }
 
 body {
   font-family: 'Raleway', 'Arial', 'Sans-serif';
@@ -22,6 +29,20 @@ body {
   overflow-x: hidden;
   line-height: 1.5;
   color: #262626; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.navigation__nav {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2;
+  padding-bottom: 1.5rem; }
 
 .text-white {
   color: #ffffff; }
@@ -32,11 +53,60 @@ body {
 .text-red {
   color: #ff2b58; }
 
-.header {
-  position: relative;
-  height: 100vh;
-  background-image: url("../../img/hero.png") no-repeat center;
-  background-size: 100%; }
+.logo {
+  font-family: 'Pacifico', 'Arial', 'Sans-serif'; }
+  .logo--header {
+    font-size: 5rem; }
+  .logo--footer {
+    font-size: 3rem; }
+
+.navigation {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: 9999;
+  background-color: #ffffff; }
+  .navigation__logo-container {
+    position: relative;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 2; }
+  .navigation__nav {
+    /* vaigation hidden*/
+    position: fixed;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    transition: .6s; }
+    .navigation__nav--active {
+      top: 10vh;
+      opacity: 1; }
+  .navigation__icon {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%); }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      display: flex;
+      width: 3rem;
+      height: 2px;
+      background-color: #262626;
+      transition: all .3s; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0; }
+    .navigation__icon::before {
+      top: -.8rem; }
+    .navigation__icon::after {
+      top: .8rem; }
 
 .footer {
   background-color: #262626; }

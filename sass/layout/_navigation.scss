@@ -1,0 +1,73 @@
+.navigation {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 9999;
+    background-color: $color-primary-light;
+
+    &__logo-container {
+        position: relative;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+
+    &__nav {
+        /* vaigation hidden*/
+        position: fixed;
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        top: -100%;
+        left: 0;
+        z-index: 1;
+        opacity: 1;
+        transition: .6s;
+
+        &--active {
+            top: 10vh;
+            opacity: 1;
+        }
+    }
+
+
+
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+
+        &,
+        &::before,
+        &::after {
+            display: flex;
+            width: 3rem;
+            height: 2px;
+            background-color: $color-primary-dark;
+            transition: all .3s;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+
+
+
+}

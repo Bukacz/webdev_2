@@ -14,4 +14,13 @@ html {
 
 body {
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.gallery__img {
+    width: 100%;
+}
+
+.image__content {
+    width: 100%;
 }

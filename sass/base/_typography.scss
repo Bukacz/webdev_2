@@ -10,14 +10,46 @@ body {
     color: $color-primary-dark;
 }
 
-.text-white {
-    color: $color-primary-light;
+ul {
+    list-style: none;
 }
 
-.text-gray {
-    color: $color-secondary-dark;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.text-red {
-    color: $color-of-love;
+.navigation__nav {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2;
+    padding-bottom: 1.5rem;
+}
+
+.text {
+    &-white {
+        color: $color-primary-light;
+    }
+
+    &-gray {
+        color: $color-secondary-dark;
+    }
+
+    &-red {
+        color: $color-of-love;
+    }
+}
+
+.logo {
+    font-family: 'Pacifico', 'Arial', 'Sans-serif';
+
+
+    &--header {
+        font-size: 5rem;
+    }
+
+    &--footer {
+        font-size: 3rem;
+    }
 }
