@@ -39,10 +39,10 @@ a {
 
 .navigation__nav {
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 2;
-  padding-bottom: 1.5rem; }
+  font-weight: 900;
+  font-size: 1.7rem;
+  line-height: 2.5;
+  padding-bottom: 1.8rem; }
 
 .text-white {
   color: #ffffff; }
@@ -71,11 +71,11 @@ a {
   .navigation__logo-container {
     position: relative;
     top: 50%;
-    left: 5%;
+    left: 3%;
     transform: translateY(-50%);
     z-index: 2; }
   .navigation__nav {
-    /* vaigation hidden*/
+    /* navigation hidden*/
     position: fixed;
     text-align: center;
     background-color: #fff;
@@ -84,15 +84,22 @@ a {
     left: 0;
     z-index: 1;
     opacity: 1;
-    transition: .6s; }
+    transition: .6s;
+    /* navigation visible*/ }
     .navigation__nav--active {
       top: 10vh;
       opacity: 1; }
+  .navigation__item:hover {
+    color: #ff6033;
+    cursor: pointer; }
   .navigation__icon {
     position: absolute;
     top: 50%;
     right: 5%;
-    transform: translateY(-50%); }
+    width: 10px;
+    height: 10px;
+    transform: translateY(-50%);
+    z-index: 3; }
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
       display: flex;
       width: 3rem;
@@ -107,6 +114,14 @@ a {
       top: -.8rem; }
     .navigation__icon::after {
       top: .8rem; }
+    .navigation__icon--active {
+      height: 0; }
+      .navigation__icon--active::before {
+        top: 0;
+        transform: rotate(-45deg); }
+      .navigation__icon--active::after {
+        top: 0;
+        transform: rotate(45deg); }
 
 .footer {
   background-color: #262626; }

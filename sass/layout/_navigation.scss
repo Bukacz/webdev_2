@@ -10,13 +10,13 @@
     &__logo-container {
         position: relative;
         top: 50%;
-        left: 5%;
+        left: 3%;
         transform: translateY(-50%);
         z-index: 2;
     }
 
     &__nav {
-        /* vaigation hidden*/
+        /* navigation hidden*/
         position: fixed;
         text-align: center;
         background-color: #fff;
@@ -27,20 +27,27 @@
         opacity: 1;
         transition: .6s;
 
+        /* navigation visible*/
         &--active {
             top: 10vh;
             opacity: 1;
         }
     }
 
-
+    &__item:hover {
+        color: $color-header;
+        cursor: pointer;
+    }
 
 
     &__icon {
         position: absolute;
         top: 50%;
         right: 5%;
+        width: 10px;
+        height: 10px;
         transform: translateY(-50%);
+        z-index: 3;
 
         &,
         &::before,
@@ -66,8 +73,22 @@
         &::after {
             top: .8rem;
         }
+
+        &--active {
+            height: 0;
+
+            &::before {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                top: 0;
+                transform: rotate(45deg);
+            }
+        }
+
+
     }
-
-
 
 }

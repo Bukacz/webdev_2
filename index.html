@@ -22,12 +22,12 @@
 
         <nav class="navigation__nav">
             <ul class="list navigation__list">
-                <li class="navigation__item">home</li>
-                <li class="navigation__item">about</li>
-                <li class="navigation__item">services</li>
-                <li class="navigation__item">gallery</li>
-                <li class="navigation__item">blog</li>
-                <li class="navigation__item">contact</li>
+                <li class="home"><a href="#" class="navigation__item home">home</a></li>
+                <li class="about"><a href="#" class="navigation__item about">about</a></li>
+                <li class="services"><a href="#" class="navigation__item services">services</a></li>
+                <li class="gallery"><a href="#" class="navigation__item gallery">gallery</a></li>
+                <li class="blog"><a href="#" class="navigation__item blog">blog</a></li>
+                <li class="contact"><a href="#" class="navigation__item contact">contact</a></li>
             </ul>
         </nav>
     </div>
@@ -35,7 +35,7 @@
 
     <!-- FRESH LIFE -->
 
-    <header class="header">
+    <header id="home" class="section-home">
         <div class="header__container">
             <h1 class="heading__primary">Fresh Life</h1>
             <p class="heading__subtext">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -47,7 +47,7 @@
     </header>
 
     <!-- ABOUT US -->
-    <section class="section-about">
+    <section id="about" class="section-about">
         <div class="image">
             <img src="img/cup.png" alt="Cup with raspberries" class="image__content">
         </div>
@@ -72,7 +72,7 @@
 
     <!-- OUR SERVICES -->
 
-    <section class="section-services">
+    <section id="services" class="section-services">
         <div class="header__container">
             <div class="image">
                 <img src="img/tomatos.png" alt="Tomatoes cut in quarters" class="image__content">
@@ -134,7 +134,9 @@
         </div>
     </section>
 
-    <section class="section-gallery">
+    <!-- SECTION GALLERY -->
+
+    <section id="gallery" class="section-gallery">
         <div class="header__container">
             <h2 class="heading-secondary">Gallery</h2>
             <p class="heading__subtext">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias error earum
@@ -170,8 +172,9 @@
         <button class="btn btn--gallery text-white hidden">view less</button>
     </section>
 
+    <!-- SECTION SUBSCRIBE-->
 
-    <section class="section-subscribe">
+    <section id="subscribe" class="section-subscribe">
         <div class="header__container">
             <h3 class="heading-tertiary">Subscribe to us</h3>
             <p class="heading__subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus autem
@@ -190,7 +193,9 @@
         </div>
     </section>
 
-    <section class="section-blog">
+    <!-- SECTION BLOG-->
+
+    <section id="blog" class="section-blog">
         <div class="header__container">
             <h2 class="heading-secondary text-white">Blog</h2>
             <p class="heading__subtext text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
@@ -234,8 +239,9 @@
 
     </section>
 
+    <!-- SECTION CONTACT-->
 
-    <section class="section-contact">
+    <section id="contact" class="section-contact">
         <div class="header__container">
             <h2 class="heading-secondary">Contact</h2>
             <p class="heading__subtext">For new projects, ideas, business or anything
@@ -283,8 +289,9 @@
         </div>
     </section>
 
+    <!-- FOOTER-->
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="footer__container">
             <p class="footer__copyright text-gray">© 2015 Company. All right reserved.</p>
         </div>
@@ -296,6 +303,11 @@
             <p class="footer__coder text-gray">Design made with<span class="text-red"> love</span> by Auskteez</p>
         </div>
     </footer>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="script.js"></script>
 </body>
 
 </html>
