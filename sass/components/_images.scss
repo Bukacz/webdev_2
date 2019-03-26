@@ -1,0 +1,27 @@
+// .image {
+//     margin-top: 4rem;
+
+//     &__content {
+//         width: 90%;
+//         margin: 0 auto;
+//     }
+// }
+
+.gallery__img {
+    width: 90%;
+}
+
+
+.blog__post-img {
+    width: 90%;
+}
+
+.image {
+    text-align: center;
+    margin: 0 auto;
+
+    &__content {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,50 @@
+.scroll {
+    @include xCenter;
+    width: 2rem;
+    height: 4rem;
+    top: 70%;
+
+
+    &__icon {
+        border: 1px solid $color-primary-dark;
+        border-radius: 40%;
+
+        &::before {
+            content: "";
+            @include xCenter;
+            top: 10%;
+            width: 2px;
+            height: 20%;
+            border-radius: 40%;
+            background-color: $color-primary-dark;
+            opacity: 0;
+            animation: scroll 2s infinite linear;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    20.0001% {
+        opacity: 0.5;
+        top: 10%;
+    }
+
+    80% {
+        opacity: 1;
+        top: 40%;
+    }
+
+    100% {
+        opacity: 0;
+        top: 40%;
+    }
+}

@@ -3,7 +3,8 @@
 
 body {
     font-family: 'Raleway', 'Arial', 'Sans-serif';
-    font-size: 1.7rem;
+    font-weight: 300;
+    font-size: 1.4rem;
     text-decoration: none;
     overflow-x: hidden;
     line-height: 1.5;
@@ -27,6 +28,7 @@ a {
     padding-bottom: 1.8rem;
 }
 
+
 .text {
     &-white {
         color: $color-primary-light;
@@ -47,9 +49,33 @@ a {
 
     &--header {
         font-size: 5rem;
+        line-height: 6rem;
     }
 
     &--footer {
         font-size: 3rem;
+    }
+}
+
+.heading {
+    &__primary {
+        font-weight: 900;
+        font-size: 5rem;
+        padding-bottom: 1.6rem;
+    }
+
+    &__secondary {
+        text-align: center;
+        font-weight: 700;
+        font-size: 4rem;
+        padding-bottom: 1.6rem;
+    }
+
+    &__subtext {
+        padding: 0 0 2rem;
+
+        &--centered {
+            text-align: center;
+        }
     }
 }

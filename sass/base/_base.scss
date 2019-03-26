@@ -17,10 +17,6 @@ body {
     overflow-x: hidden;
 }
 
-.gallery__img {
-    width: 100%;
-}
-
-.image__content {
-    width: 100%;
+.screen-only {
+    opacity: 0;
 }

@@ -1,15 +1,23 @@
 .section-about {
     background-image: radial-gradient($color-section-about-first, $color-section-about-second);
+    @include flexCenter;
+    padding: 2rem 0 4rem;
 }
 
 .section-services {
     background-color: $color-section-services;
+    @include flexCenter;
+    padding: 2rem 0 4rem;
 }
 
 .section-gallery {
     background-color: $color-section-gallery;
+    @include flexCenter;
+    padding: 2rem 0 4rem;
 }
 
 .section-blog {
     background-color: $color-section-blog;
+    @include flexCenter;
+    padding: 2rem 0 4rem;
 }
