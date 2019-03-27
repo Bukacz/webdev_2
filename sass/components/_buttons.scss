@@ -33,7 +33,13 @@
     }
 
     &--header {
-        width: 75%;
+        width: 20rem;
         background-color: $color-header;
+    }
+
+    &--gallery {
+        margin-top: 2rem;
+        background-color: $color-btn-gallery;
+        width: 20rem;
     }
 }

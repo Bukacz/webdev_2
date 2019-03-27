@@ -82,58 +82,78 @@
             <div class="image">
                 <img src="img/tomatos.png" alt="Tomatoes cut in quarters" class="image__content">
             </div>
-            <h2 class="heading__secondary text-white">Our Services</h2>
+            <h2 class="heading__secondary heading__secondary--centered text-white">Our Services</h2>
         </div>
         <div class="services">
             <ul class="list services__list">
                 <li class="services__item box-shadow">
-                    <h4 class="heading__quaternary services__heading">Online Shopping</h3>
-                        <div class="icon"><img src="img/basket.png" alt="Shopping basket" class="icon__content"></div>
-                        <div class="wrapper">
-                            <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                elit.
-                                Voluptates
-                                atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                                aperiam
-                                temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
-                        </div>
+                    <div class="services__wrapper">
+                        <h4 class="heading__quaternary services__heading">Online Shopping</h4>
+                        <div class="services__icon"><img src="img/basket.png" alt="Shopping basket"
+                                class="services__icon--content"></div>
+                    </div>
+
+                    <div class="services__wrapper">
+                        <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing
+                            elit.
+                            Voluptates
+                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
+                            aperiam
+                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                    </div>
                 </li>
                 <li class="services__item box-shadow">
-                    <h4 class="heading__quaternary services__heading">Quality Product</h3>
-                        <div class="icon"><img src="img/vegetable.png" alt="Fresh vegetable" class="icon__content">
+                    <div class="services__wrapper">
+                        <h4 class="heading__quaternary services__heading">Quality Product</h4>
+                        <div class="services__icon"><img src="img/vegetable.png" alt="Fresh vegetable"
+                                class="services__icon--content">
                         </div>
-                        <div class="wrapper">
-                            <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                elit.
-                                Voluptates
-                                atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                                aperiam
-                                temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
-                        </div>
+                    </div>
+
+                    <div class="services__slider">
+                        <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing
+                            elit.
+                            Voluptates
+                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
+                            aperiam
+                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                    </div>
                 </li>
                 <li class="services__item box-shadow">
-                    <h4 class="heading__quaternary services__heading">Domestic & International Delivery</h3>
-                        <div class="icon"><img src="img/worldwide.png" alt="Wordlwide" class="icon__content"></div>
-                        <div class="wrapper">
-                            <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                elit.
-                                Voluptates
-                                atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                                aperiam
-                                temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
-                        </div>
+                    <div class="services__wrapper">
+                        <h4 class="heading__quaternary services__heading">Domestic & International Delivery</h4>
+                        <div class="services__icon"><img src="img/worldwide.png" alt="Wordlwide"
+                                class="services__icon--content"></div>
+                    </div>
+
+                    <div class="services__slider">
+                        <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing
+                            elit.
+                            Voluptates
+                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
+                            aperiam
+                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                    </div>
                 </li>
                 <li class="services__item box-shadow">
-                    <h4 class="heading__quaternary services__heading">Well Organized</h3>
-                        <div class="icon"><img src="img/carrot.png" alt="Carrot" class="icon__content"></div>
-                        <div class="wrapper">
-                            <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                elit.
-                                Voluptates
-                                atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                                aperiam
-                                temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
-                        </div>
+                    <div class="services__wrapper">
+                        <h4 class="heading__quaternary services__heading">Well Organized</h4>
+                        <div class="services__icon"><img src="img/carrot.png" alt="Carrot"
+                                class="services__icon--content"></div>
+                    </div>
+
+                    <div class="services__slider">
+                        <p class="services__subtext heading__subtext text-white">Lorem ipsum dolor sit, amet
+                            consectetur adipisicing
+                            elit.
+                            Voluptates
+                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
+                            aperiam
+                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -164,7 +184,7 @@
             <figure class="gallery__item gallery__item--5">
                 <img src="img/gallery_5.png" alt="Gallery Image 5" class="gallery__img">
             </figure>
-            <div class="wrapper">
+            <div class="gallery__wrapper">
                 <figure class="gallery__item gallery__item--6">
                     <img src="img/gallery_6.jpg" alt="Gallery Image 6" class="gallery__img">
                 </figure>
@@ -174,7 +194,6 @@
             </div>
         </div>
         <button class="btn btn--gallery text-white">view more</button>
-        <button class="btn btn--gallery text-white hidden">view less</button>
     </section>
 
     <!-- SECTION SUBSCRIBE-->
@@ -269,7 +288,8 @@
                         <label for="phone_number" class="form__label">Your phone number...</label>
                     </div>
                     <div class="form__group">
-                        <textarea class="form__textarea" name="message" id="message" cols="30" rows="10" placeholder="Your message..."></textarea>
+                        <textarea class="form__textarea" name="message" id="message" cols="30" rows="10"
+                            placeholder="Your message..."></textarea>
                         <label for="message" class="form__label">Your message...</label>
                     </div>
                     <button class="btn btn--contact">Send message</button>

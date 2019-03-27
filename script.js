@@ -33,3 +33,32 @@ list.addEventListener('click', (e) => {
     nav.classList.remove('navigation__nav--active');
     burger.classList.remove('navigation__icon--active');
 })
+
+// SERVICES SECTION SLIDERS
+
+const slider = document.querySelectorAll('.services__slider');
+const servWrap = document.querySelectorAll('.services__wrapper');
+
+
+
+for (let i = 0; i < servWrap.length; i++) {
+    servWrap[i].addEventListener('click', function () {
+        slider[i].classList.toggle('services__slider--active');
+    });
+};
+
+// SHOW MORE GALLERY 
+
+const btnGallery = document.querySelector('.btn--gallery');
+const galleryWrap = document.querySelector('.gallery__wrapper');
+
+btnGallery.addEventListener('click', function () {
+    galleryWrap.classList.toggle('gallery__wrapper--active');
+    btnGallery.classList.toggle('hidden');
+    if (!btnGallery.classList.contains('hidden')) {
+        btnGallery.textContent = 'show more';
+    } else {
+        btnGallery.textContent = 'show less';
+    }
+    btnGallery.style.textDecoration = 'uppercase';
+});
