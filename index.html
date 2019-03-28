@@ -37,8 +37,8 @@
 
     <!-- FRESH LIFE -->
 
-    <header id="home" class="header">
-        <div class="header__home header__container">
+    <header id="home" class="hero">
+        <div class="hero__container">
             <h1 class="heading__primary">Fresh Life</h1>
             <p class="heading__subtext">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
                 minim veniam, quis nostrud exercitation ullamco.</p>
@@ -86,24 +86,19 @@
         </div>
         <div class="services">
             <ul class="list services__list">
-                <li class="services__item box-shadow">
+                <li class="services__item">
                     <div class="services__wrapper">
                         <h4 class="heading__quaternary services__heading">Online Shopping</h4>
                         <div class="services__icon"><img src="img/basket.png" alt="Shopping basket"
                                 class="services__icon--content"></div>
                     </div>
 
-                    <div class="services__wrapper">
-                        <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet
-                            consectetur adipisicing
-                            elit.
-                            Voluptates
-                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                            aperiam
-                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                    <div class="services__slider">
+                        <p class="heading__subtext text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Dolorem quod rerum hic animi maxime autem. Tenetur consequatur ex quaerat ducimus.</p>
                     </div>
                 </li>
-                <li class="services__item box-shadow">
+                <li class="services__item">
                     <div class="services__wrapper">
                         <h4 class="heading__quaternary services__heading">Quality Product</h4>
                         <div class="services__icon"><img src="img/vegetable.png" alt="Fresh vegetable"
@@ -112,16 +107,11 @@
                     </div>
 
                     <div class="services__slider">
-                        <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet
-                            consectetur adipisicing
-                            elit.
-                            Voluptates
-                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                            aperiam
-                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                        <p class="heading__subtext text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Dolorem quod rerum hic animi maxime autem. Tenetur consequatur ex quaerat ducimus.</p>
                     </div>
                 </li>
-                <li class="services__item box-shadow">
+                <li class="services__item">
                     <div class="services__wrapper">
                         <h4 class="heading__quaternary services__heading">Domestic & International Delivery</h4>
                         <div class="services__icon"><img src="img/worldwide.png" alt="Wordlwide"
@@ -129,16 +119,11 @@
                     </div>
 
                     <div class="services__slider">
-                        <p class="heading__subtext text-white">Lorem ipsum dolor sit, amet
-                            consectetur adipisicing
-                            elit.
-                            Voluptates
-                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                            aperiam
-                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                        <p class="heading__subtext text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            Dolorem quod rerum hic animi maxime autem. Tenetur consequatur ex quaerat ducimus.</p>
                     </div>
                 </li>
-                <li class="services__item box-shadow">
+                <li class="services__item">
                     <div class="services__wrapper">
                         <h4 class="heading__quaternary services__heading">Well Organized</h4>
                         <div class="services__icon"><img src="img/carrot.png" alt="Carrot"
@@ -146,13 +131,9 @@
                     </div>
 
                     <div class="services__slider">
-                        <p class="services__subtext heading__subtext text-white">Lorem ipsum dolor sit, amet
-                            consectetur adipisicing
-                            elit.
-                            Voluptates
-                            atque unde dolorem ipsam magni eaque modi, neque incidunt iste placeat harum error
-                            aperiam
-                            temporibus quo repellendus assumenda maiores aspernatur reiciendis.</p>
+                        <p class="services__subtext heading__subtext text-white">Lorem ipsum, dolor sit amet consectetur
+                            adipisicing elit.
+                            Dolorem quod rerum hic animi maxime autem. Tenetur consequatur ex quaerat ducimus.</p>
                     </div>
                 </li>
             </ul>
@@ -203,17 +184,19 @@
             <h3 class="heading__tertiary">Subscribe to us</h3>
             <p class="heading__subtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus autem
                 accusamus quo, reiciendis id voluptatem. Maiores voluptatibus ab error ratione deleniti.</p>
-        </div>
-        <div class="subscribe-form">
-            <form action="#" class="form">
-                <div class="form__group">
-                    <input type="email" class="form__input" id="email" placeholder="Your e-mail address..." required>
-                    <label for="email" class="form__label">Your email address</label>
-                </div>
-                <div class="form__group">
-                    <button class="btn btn--subscribe btn--wide text-white"></button>
-                </div>
-            </form>
+
+            <div class="subscribe-form">
+                <form action="#" class="form">
+                    <div class="form__group">
+                        <input type="email" class="form__input" id="email" placeholder="Your e-mail address..."
+                            required>
+                        <label for="email" class="form__label">Your email address</label>
+                    </div>
+                    <div class="form__btn">
+                        <button class="btn btn--subscribe btn--wide text-white">subscribe</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
@@ -222,43 +205,45 @@
     <section id="blog" class="section-blog">
         <div class="header__container">
             <h2 class="heading__secondary text-white">Blog</h2>
-            <p class="heading__subtext text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            <p class="heading__subtext heading__subtext--centered text-white">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Inventore
                 ducimus eveniet nulla. Laboriosam.Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
                 ducimus eveniet nulla. Laboriosam.</p>
         </div>
         <div class="blog">
             <div class="blog__post-container">
                 <a href="#" class="blog__post">
-                    <img src="img/green_smoothies.png" alt="Green smoothies" class="blog__post-img">
-                    <span class="blog__date">20 nov</span>
-                    <div class="blog__post-title-container">
-                        <h4 class="heading__quaternary blog__post-title">Green Smoothies: Too Much of a Good Thing?</h4>
-                        <p class="heading__subtext blog__author">By Auskteez - 2 hours ago</p>
+                    <div class="gradient"></div>
+                    <span class="blog__date text-white">20 nov</span>
+                    <div class="blog__title-container">
+                        <h4 class="heading__quaternary blog__post-title text-white">Green Smoothies: Too Much of a Good Thing?</h4>
+                        <p class="heading__subtext blog__author text-white">By Auskteez - 2 hours ago</p>
+                    </div>
+                    
+                </a>
+
+            </div>
+            <div class="blog__post-container">
+                <a href="#" class="blog__post">
+                    <div class="gradient"></div>
+                    <span class="blog__date text-white">14 nov</span>
+                    <div class="blog__title-container">
+                        <h4 class="heading__quaternary blog__post-title text-white">Growing Food and a "Thirst" for Innovation</h4>
+                        <p class="heading__subtext blog__author text-white">By Auskteez - 3 hours ago</p>
                     </div>
                 </a>
             </div>
             <div class="blog__post-container">
                 <a href="#" class="blog__post">
-                    <img src="img/growing_food.png" alt="Pea soup" class="blog__post-img">
-                    <span class="blog__date">14 nov</span>
-                    <div class="blog__post-title-container">
-                        <h4 class="heading__quaternary blog__post-title">Growing Food and a "Thirst" for Innovation</h4>
-                        <p class="heading__subtext blog__author">By Auskteez - 3 hours ago</p>
-                    </div>
-                </a>
-            </div>
-            <div class="blog__post-container">
-                <a href="#" class="blog__post">
-                    <img src="img/pesticides_and_food.png" alt="Pea soup" class="blog__post-img">
-                    <span class="blog__date">10 nov</span>
-                    <div class="blog__post-title-container">
-                        <h4 class="heading__quaternary blog__post-title">Pesticides & Food: What You Need to Know</h4>
-                        <p class="heading__subtext blog__author">By Auskteez - 6 hours ago</p>
+                    <div class="gradient"></div>
+                    <span class="blog__date text-white">10 nov</span>
+                    <div class="blog__title-container">
+                        <h4 class="heading__quaternary blog__post-title text-white">Pesticides & Food: What You Need to Know</h4>
+                        <p class="heading__subtext blog__author text-white">By Auskteez - 6 hours ago</p>
                     </div>
                 </a>
             </div>
             <button class="btn btn--bog text-white">view more</button>
-            <button class="btn btn--blog text-white hidden">view less</button>
         </div>
 
     </section>

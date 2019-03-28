@@ -42,4 +42,10 @@
         background-color: $color-btn-gallery;
         width: 20rem;
     }
+
+    &--subscribe {
+        margin-bottom: 2rem;
+        background-color: $color-btn-subscribe;
+        width: 100%;
+    }
 }

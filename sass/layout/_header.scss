@@ -1,20 +1,14 @@
-.header {
+.hero {
     margin-top: 8vh;
     min-height: 92vh;
     background: url(../../img/hero.png) no-repeat top;
-
     position: relative;
 
-    &__home {
-        @include absCenter;
-    }
-
     &__container {
+        @include absCenter;
         display: flex;
         flex-direction: column;
-        align-content: center;
         width: 90%;
-        position: relative;
     }
 
 }
