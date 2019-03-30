@@ -24,12 +24,12 @@
 
         <nav class="navigation__nav">
             <ul class="list navigation__list">
-                <li class="home"><a href="#" class="navigation__item home">home</a></li>
-                <li class="about"><a href="#" class="navigation__item about">about</a></li>
-                <li class="services"><a href="#" class="navigation__item services">services</a></li>
-                <li class="gallery"><a href="#" class="navigation__item gallery">gallery</a></li>
-                <li class="blog"><a href="#" class="navigation__item blog">blog</a></li>
-                <li class="contact"><a href="#" class="navigation__item contact">contact</a></li>
+                <li class="nav-home"><a href="#" class="navigation__item nav-home">home</a></li>
+                <li class="nav-about"><a href="#" class="navigation__item nav-about">about</a></li>
+                <li class="nav-services"><a href="#" class="navigation__item nav-services">services</a></li>
+                <li class="nav-gallery"><a href="#" class="navigation__item nav-gallery">gallery</a></li>
+                <li class="nav-blog"><a href="#" class="navigation__item nav-blog">blog</a></li>
+                <li class="nav-contact"><a href="#" class="navigation__item nav-contact">contact</a></li>
             </ul>
         </nav>
     </div>
@@ -243,7 +243,7 @@
                     </div>
                 </a>
             </div>
-            <button class="btn btn--bog text-white">view more</button>
+            <button class="btn btn--blog text-white">view more</button>
         </div>
 
     </section>
@@ -256,43 +256,45 @@
             <p class="heading__subtext">For new projects, ideas, business or anything
                 you'd like to discuss, contact with me! </p>
         </div>
-        <div class="contact">
-            <div class="contact-form">
-                <form action="#" class="form">
-                    <div class="form__group">
-                        <input type="text" class="form__input" id="name" placeholder="Your name..." required>
+        <div class="ct">
+            <div class="ct__form-container">
+                <form action="#" class="ct-form ">
+                    <div class="ct-form__group">
+                        <input type="text" class="ct-form__input ct-form__input--focus text-white " id="name"
+                            placeholder="Your name..." required>
                         <label for="name" class="form__label">Your name...</label>
                     </div>
-                    <div class="form__group">
-                        <input type="email" class="form__input" id="email" placeholder="Your e-mail..." required>
+                    <div class="ct-form__group">
+                        <input type="email" class="ct-form__input text-white" id="email" placeholder="Your e-mail..."
+                            required>
                         <label for="email" class="form__label">Your e-mail...</label>
                     </div>
-                    <div class="form__group">
-                        <input type="number" class="form__input" id="phone_number" placeholder="Your phone number..."
-                            required>
+                    <div class="ct-form__group">
+                        <input type="number" class="ct-form__input text-white" id="phone_number"
+                            placeholder="Your phone number..." required>
                         <label for="phone_number" class="form__label">Your phone number...</label>
                     </div>
-                    <div class="form__group">
-                        <textarea class="form__textarea" name="message" id="message" cols="30" rows="10"
+                    <div class="ct-form__group">
+                        <textarea class="ct-form__textarea text-white" name="message" id="message" cols="30" rows="10"
                             placeholder="Your message..."></textarea>
                         <label for="message" class="form__label">Your message...</label>
                     </div>
-                    <button class="btn btn--contact">Send message</button>
+                    <button class="btn btn--contact text-white">Send message</button>
                 </form>
             </div>
 
-            <div class="contact__info">
+            <div class="ct__info">
                 <div class="address">
-                    <h4 class="heading__quaternary text-white">Address</h4>
-                    <p class="heading__subtext text-white">123 City name, Street, City, Country</p>
+                    <h4 class="heading__quaternary heading__quaternary--ct ">Address</h4>
+                    <p class="heading__subtext heading__subtext--ct">123 City name, Street, City, Country</p>
                 </div>
                 <div class="email">
-                    <h4 class="heading__quaternary text-white">e-mail</h4>
-                    <p class="heading__subtext text-white">cahee@domain.com</p>
+                    <h4 class="heading__quaternary heading__quaternary--ct ">e-mail</h4>
+                    <p class="heading__subtext heading__subtext--ct ">cahee@domain.com</p>
                 </div>
                 <div class="phone">
-                    <h4 class="heading__quaternary text-white">phone</h4>
-                    <p class="heading__subtext text-white">+012 345 6789</p>
+                    <h4 class="heading__quaternary heading__quaternary--ct ">phone</h4>
+                    <p class="heading__subtext heading__subtext--ct">+012 345 6789</p>
                 </div>
             </div>
         </div>
@@ -302,14 +304,14 @@
 
     <footer id="footer" class="footer">
         <div class="footer__container">
-            <p class="footer__copyright text-gray">© 2015 Company. All right reserved.</p>
+            <p class="footer__copyright text-gray">© 2019 Company. All right reserved.</p>
         </div>
-        <div class="logo__container--footer">
+        <div class="footer__container logo__container--footer">
             <p class="logo logo--footer text-gray">Cahee</p>
         </div>
         <div class="footer__container">
-            <p class="footer__coder text-gray">Website made with<span class="text-red"> love</span> by Bukacz</p>
-            <p class="footer__coder text-gray">Design made with<span class="text-red"> love</span> by Auskteez</p>
+            <p class="footer__coder text-gray">Coded with<span class="text-love"> love</span> by Bukacz</p>
+            <p class="footer__coder text-gray">Designed with<span class="text-love"> love</span> by Auskteez</p>
         </div>
     </footer>
 

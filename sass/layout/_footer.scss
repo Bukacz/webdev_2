@@ -1,3 +1,10 @@
 .footer {
     background-color: $color-primary-dark;
+    @include flexCenter;
+    padding: 6rem 0 4rem 0;
+    text-align: center;
+
+    &__container {
+        padding-bottom: 1rem;
+    }
 }

@@ -49,7 +49,8 @@ a {
         color: $color-secondary-dark;
     }
 
-    &-red {
+    &-love {
+        font-weight: 700;
         color: $color-of-love;
     }
 }
@@ -91,14 +92,26 @@ a {
         font-size: 1.6rem;
         font-weight: 700;
         padding: 0 1rem;
+
+        &--ct {
+            color: $color-primary-light;
+            text-shadow: 2px 2px 2px $color-primary-dark;
+
+        }
     }
 
 
     &__subtext {
-        padding: 0 0 2rem;
+        padding: 0 0 3rem;
 
         &--centered {
             text-align: center;
+        }
+
+        &--ct {
+            color: $color-primary-light;
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
         }
     }
 }
@@ -117,4 +130,21 @@ a {
         padding-top: 10px;
         font-size: 1.2rem;
     }
+}
+
+.ct-form {
+
+
+    &__input,
+    &__textarea {
+        padding: 1.5rem 2rem;
+        font-family: inherit;
+        font-size: 1.2rem;
+
+        &::placeholder {
+            color: $color-primary-light;
+        }
+
+    }
+
 }

@@ -22,8 +22,9 @@ for (let i = 0; i < anchor.length; i++) {
 const list = document.querySelector('.navigation__list');
 list.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() === 'a') {
-        var id = e.target.closest('li').classList;
-        console.log(`id z a $(id)`);
+        const selectedItem = e.target.closest('li').classList.value;
+        var id = selectedItem.slice(4);
+
     }
     const top = document.getElementById(id).offsetTop;
     window.scrollTo({
