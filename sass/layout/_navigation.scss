@@ -46,6 +46,7 @@
         top: 50%;
         right: 10%;
         transform: translateY(-50%);
+        display: block;
     }
 
     &__icon {
@@ -58,6 +59,11 @@
             height: 2px;
             background-color: $color-primary-dark;
             transition: all .3s;
+
+            @include respond-to('medium-dev') {
+                width: 4rem;
+                height: 3px;
+            }
         }
 
         &::before,
@@ -69,10 +75,18 @@
 
         &::before {
             top: -.8rem;
+
+            @include respond-to('medium-dev') {
+                top: -1rem;
+            }
         }
 
         &::after {
             top: .8rem;
+
+            @include respond-to('medium-dev') {
+                top: 1rem;
+            }
         }
 
         &--active {

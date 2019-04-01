@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
     line-height: 1.5;
     color: $color-primary-dark;
+
+    @include respond-to('medium-dev') {
+        font-size: 1.7rem;
+    }
 }
 
 ul {
@@ -36,6 +40,21 @@ a {
         align-content: center;
         width: 90%;
         position: relative;
+
+        @include respond-to('small-dev') {
+            width: 85%;
+        }
+
+        @include respond-to('medium-dev') {
+            max-width: 57rem;
+        }
+    }
+
+    &__subscribe {
+        @include respond-to('medium-dev') {
+            width: 70%;
+            max-width: 57rem;
+        }
     }
 
 }
@@ -58,7 +77,6 @@ a {
 .logo {
     font-family: 'Pacifico', 'Arial', 'Sans-serif';
 
-
     &--header {
         font-size: 5rem;
         line-height: 6rem;
@@ -80,11 +98,32 @@ a {
     &__tertiary {
         text-align: center;
         font-weight: 700;
-        font-size: 4rem;
         padding-bottom: 2rem;
 
         &--centered {
             @include absCenter;
+        }
+
+    }
+
+    &__secondary {
+        font-size: 4.5rem;
+
+        @include respond-to('small-dev') {
+            font-size: 5.5rem;
+        }
+
+        @include respond-to('medium-dev') {
+            font-size: 6rem;
+        }
+    }
+
+    &__tertiary {
+        font-size: 3rem;
+
+        @include respond-to('medium-dev') {
+            font-size: 4rem;
+            text-align: left;
         }
     }
 
@@ -93,16 +132,27 @@ a {
         font-weight: 700;
         padding: 0 2rem;
 
+        @include respond-to('medium-dev') {
+            font-size: 2rem;
+        }
+
+
         &--ct {
+            text-transform: uppercase;
             color: $color-primary-light;
             text-shadow: 2px 2px 2px $color-primary-dark;
 
+            @include respond-to('medium-dev') {
+                color: $color-primary-dark;
+                text-shadow: none;
+            }
         }
     }
 
 
     &__subtext {
         padding: 0 0 3rem;
+
 
         &--centered {
             text-align: center;
@@ -111,8 +161,14 @@ a {
         &--ct {
             color: $color-primary-light;
             font-size: 1.2rem;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 2rem;
+
+            @include respond-to('medium-dev') {
+                color: $color-primary-dark;
+                font-size: 1.4rem;
+            }
         }
+
     }
 }
 
@@ -127,11 +183,19 @@ a {
         @include respond-to('smallest-dev') {
             font-size: 1.6rem;
         }
+
+        @include respond-to('smallest-dev') {
+            font-size: 2rem;
+        }
     }
 
     &__author {
         padding: 1rem 2rem;
         font-size: 1.2rem;
+
+        @include respond-to('medium-dev') {
+            font-size: 1.4rem;
+        }
     }
 }
 

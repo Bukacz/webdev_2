@@ -18,9 +18,26 @@
     width: 90%;
     min-width: 20rem;
 
+
+    &__image {
+        text-align: center;
+        margin: 2rem;
+        width: 90%;
+
+        &--content {
+            width: 100%;
+
+            @include respond-to('medium-dev') {
+                max-width: 50rem;
+            }
+        }
+    }
+
+
     &__list {
         position: relative;
         margin: 0 auto;
+        max-width: 50rem;
     }
 
 
@@ -72,6 +89,10 @@
 
     &__item {
         margin-bottom: 1rem;
+
+        @include respond-to('small-dev') {
+            margin-bottom: 3rem;
+        }
     }
 
     &__img {
@@ -94,15 +115,25 @@
 // -------------SECTION SUBSCRIBE-------------
 
 .section-subscribe {
-    @include flexCenter;
-    padding: 6rem 0 4rem;
+
+    padding: 6rem 4rem 4rem;
     background: url(../img/subscribe_bg.png) no-repeat center;
     background-size: cover;
 }
 
 .form {
+    @include respond-to('medium-dev') {
+        display: flex;
+    }
+
     &__group {
         margin-top: 2rem;
+        width: 100%;
+        margin-right: 2rem;
+
+        @include respond-to('medium-dev') {
+            max-width: 57rem;
+        }
     }
 
     &__input {
@@ -110,8 +141,10 @@
         display: block;
         font-size: inherit;
         color: inherit;
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
         border: 1px solid $color-primary-dark;
+        height: 5.1rem;
+
     }
 
     &__label {
@@ -127,7 +160,6 @@
 
     &__btn {
         margin-top: 2rem;
-        text-align: center;
     }
 }
 
@@ -157,13 +189,15 @@
 
     }
 
-
     &__post {
         width: 90%;
         height: 30rem;
         margin-bottom: 3rem;
         position: relative;
 
+        &-img {
+            width: 90%;
+        }
 
         &-container {
             height: 100%;
@@ -176,6 +210,11 @@
         @include respond-to('smallest-dev') {
             width: 80%;
             height: 35rem;
+        }
+
+        @include respond-to('medium-dev') {
+            width: 60%;
+            height: 40rem;
         }
     }
 
@@ -201,6 +240,13 @@
             width: 5rem;
             height: 5rem;
         }
+
+        @include respond-to('smallest-dev') {
+            top: 3rem;
+            left: 3rem;
+            width: 6rem;
+            height: 6rem;
+        }
     }
 }
 
@@ -225,8 +271,19 @@
 .ct {
     width: 90%;
 
+    @include respond-to('medium-dev') {
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+    }
+
     &__form-container {
         text-align: center;
+
+        @include respond-to('medium-dev') {
+            flex-basis: 50%;
+            max-width: 50rem;
+        }
     }
 
     &-form {
@@ -254,5 +311,11 @@
             resize: none;
         }
 
+    }
+
+    &__info {
+        @include respond-to('medium-dev') {
+            flex-basis: 40%;
+        }
     }
 }
