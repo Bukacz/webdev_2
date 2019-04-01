@@ -1,8 +1,12 @@
+// -------------SECTION ABOUT-------------
 .section-about {
     background-image: radial-gradient($color-section-about-first, $color-section-about-second);
     @include flexCenter;
     padding: 2rem 0 4rem;
 }
+
+
+// -------------SECTION SERVICES-------------
 
 .section-services {
     background-color: $color-section-services;
@@ -55,10 +59,12 @@
 }
 
 
+// -------------SECTION GALLERY-------------
+
 .section-gallery {
     background-color: $color-section-gallery;
     @include flexCenter;
-    padding: 5rem 0 4rem;
+    padding: 5rem 0 10rem 0;
     text-align: center;
 }
 
@@ -84,9 +90,14 @@
     }
 }
 
+
+// -------------SECTION SUBSCRIBE-------------
+
 .section-subscribe {
     @include flexCenter;
     padding: 6rem 0 4rem;
+    background: url(../img/subscribe_bg.png) no-repeat center;
+    background-size: cover;
 }
 
 .form {
@@ -120,6 +131,9 @@
     }
 }
 
+
+// -------------SECTION BLOG-------------
+
 .section-blog {
     background-color: $color-section-blog;
     @include flexCenter;
@@ -131,28 +145,44 @@
     margin: 0 auto 2rem auto;
     width: 100%;
 
-    &__post-container {
-        width: 90%;
-        height: 30rem;
-        margin-bottom: 3rem;
-    }
+
 
     @for $i from 1 through 3 {
 
-        .blog__post-container:nth-child(#{$i}) {
-            .blog__post {
+        .blog__post:nth-child(#{$i}) {
+            .blog__post-container {
                 background-image: url(/img/blog_#{$i}.png);
             }
         }
 
     }
 
+
     &__post {
+        width: 90%;
+        height: 30rem;
+        margin-bottom: 3rem;
         position: relative;
-        height: 100%;
-        background: no-repeat center;
-        background-size: cover;
-        display: block;
+
+
+        &-container {
+            height: 100%;
+            background: no-repeat center;
+            background-size: cover;
+            display: block;
+
+        }
+
+        @include respond-to('smallest-dev') {
+            width: 80%;
+            height: 35rem;
+        }
+    }
+
+    &__title-container {
+        position: absolute;
+        bottom: 2rem;
+
     }
 
     &__date {
@@ -163,13 +193,15 @@
         border-radius: 5px;
         width: 4rem;
         height: 4rem;
-    }
 
-    &__title-container {
-        position: relative;
-        top: 16rem;
-    }
 
+        @include respond-to('smallest-dev') {
+            top: 2.5rem;
+            left: 2.5rem;
+            width: 5rem;
+            height: 5rem;
+        }
+    }
 }
 
 .gradient {
@@ -180,6 +212,8 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, .9) 90%);
 }
 
+
+// -------------SECTION CONTACT-------------
 
 .section-contact {
     background: url(../img/contact.png) no-repeat top left;

@@ -1,10 +1,13 @@
 /* ------------------- COLORS ------------------- */
 /*
 $breakpoint argument choices:
--phone
--tab-port
--tab-land
--big-desktop
+smallest - device : 500px/16px = 31.25em,
+small-device : 600px / 16px = 37.5em,
+medium-device : 768px/16px = 48em,
+big-device : 900px/16px = 56.25em,
+bigger-device : 1024px/16px =  64em,
+large-device : 
+
 
 */
 @import url("https://fonts.googleapis.com/css?family=Pacifico");
@@ -185,7 +188,7 @@ a {
 .heading__quaternary {
   font-size: 1.6rem;
   font-weight: 700;
-  padding: 0 1rem; }
+  padding: 0 2rem; }
   .heading__quaternary--ct {
     color: #ffffff;
     text-shadow: 2px 2px 2px #262626; }
@@ -204,10 +207,12 @@ a {
   font-size: 1.4rem;
   text-align: center;
   text-transform: uppercase; }
+  @media screen and (min-width: 31.25em) {
+    .blog__date {
+      font-size: 1.6rem; } }
 
 .blog__author {
-  padding: 0 1rem;
-  padding-top: 10px;
+  padding: 1rem 2rem;
   font-size: 1.2rem; }
 
 .ct-form__input, .ct-form__textarea {
@@ -353,7 +358,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5rem 0 4rem;
+  padding: 5rem 0 10rem 0;
   text-align: center; }
 
 .gallery__item {
@@ -374,7 +379,9 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 0 4rem; }
+  padding: 6rem 0 4rem;
+  background: url(../img/subscribe_bg.png) no-repeat center;
+  background-size: cover; }
 
 .form__group {
   margin-top: 2rem; }
@@ -414,22 +421,29 @@ a {
   align-items: center;
   margin: 0 auto 2rem auto;
   width: 100%; }
-  .blog__post-container {
-    width: 90%;
-    height: 30rem;
-    margin-bottom: 3rem; }
-  .blog .blog__post-container:nth-child(1) .blog__post {
+  .blog .blog__post:nth-child(1) .blog__post-container {
     background-image: url(/img/blog_1.png); }
-  .blog .blog__post-container:nth-child(2) .blog__post {
+  .blog .blog__post:nth-child(2) .blog__post-container {
     background-image: url(/img/blog_2.png); }
-  .blog .blog__post-container:nth-child(3) .blog__post {
+  .blog .blog__post:nth-child(3) .blog__post-container {
     background-image: url(/img/blog_3.png); }
   .blog__post {
-    position: relative;
-    height: 100%;
-    background: no-repeat center;
-    background-size: cover;
-    display: block; }
+    width: 90%;
+    height: 30rem;
+    margin-bottom: 3rem;
+    position: relative; }
+    .blog__post-container {
+      height: 100%;
+      background: no-repeat center;
+      background-size: cover;
+      display: block; }
+    @media screen and (min-width: 31.25em) {
+      .blog__post {
+        width: 80%;
+        height: 35rem; } }
+  .blog__title-container {
+    position: absolute;
+    bottom: 2rem; }
   .blog__date {
     position: absolute;
     top: 2rem;
@@ -438,9 +452,12 @@ a {
     border-radius: 5px;
     width: 4rem;
     height: 4rem; }
-  .blog__title-container {
-    position: relative;
-    top: 16rem; }
+    @media screen and (min-width: 31.25em) {
+      .blog__date {
+        top: 2.5rem;
+        left: 2.5rem;
+        width: 5rem;
+        height: 5rem; } }
 
 .gradient {
   position: absolute;

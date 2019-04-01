@@ -19,44 +19,26 @@
 
 /*
 $breakpoint argument choices:
--phone
--tab-port
--tab-land
--big-desktop
+smallest - device : 500px/16px = 31.25em,
+small-device : 600px / 16px = 37.5em,
+medium-device : 768px/16px = 48em,
+big-device : 900px/16px = 56.25em,
+bigger-device : 1024px/16px =  64em,
+large-device : 
+
 
 */
 
-@mixin respond($breakpoint) {
-    @if $breakpoint==phone {
-        @media only screen and (max-width: 37.5em) {
-            @content
-        }
+$breakpoints: ('smallest-dev' : 31.25em,
+'small-dev': 37.5em,
+'medium-dev': 48em,
+'big-dev': 56.25em,
+'bigger-dev': 64em,
+'large-dev': 75em,
+'xtra-large-dev': 100em);
 
-        ; //600px
+@mixin respond-to($breakpoint) {
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
     }
-
-    @if $breakpoint==tab-port {
-        @media only screen and (max-width: 56.25em) {
-            @content
-        }
-
-        ; //900px/16
-    }
-
-    @if $breakpoint==tab-land {
-        @media only screen and (max-width: 75em) {
-            @content
-        }
-
-        ; //1200px/16
-    }
-
-    @if $breakpoint==big-desktop {
-        @media only screen and (min-width: 112.5em) {
-            @content
-        }
-
-        ; //1800px/16
-    }
-
 }
