@@ -6,6 +6,11 @@
     z-index: 9999;
     background-color: $color-primary-light;
 
+    @include respond-to('bigger-dev') {
+        background-color: transparent;
+        overflow: visible;
+    }
+
     &__logo-container {
         display: inline-block;
         position: relative;
@@ -28,16 +33,48 @@
         opacity: 1;
         transition: .6s;
 
+        @include respond-to('bigger-dev') {
+            top: 0;
+            left: 40%;
+            padding-top: 2rem;
+            width: 56rem;
+            background-color: transparent;
+        }
+
+        @include respond-to('large-dev') {
+            left: 50%;
+        }
+
+        @include respond-to('xtra-large-dev') {
+            width: 65rem;
+            left: 55%;
+        }
+
         /* navigation visible*/
         &--active {
             top: 6vh;
             opacity: 1;
         }
+
     }
 
-    &__item:hover {
-        color: $color-header;
-        cursor: pointer;
+    &__list {
+        @include respond-to('bigger-dev') {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+
+        &:hover {
+            color: $color-header;
+            cursor: pointer;
+        }
+
+        &--scrolled-to {
+            border-top: 3px solid $color-header;
+        }
     }
 
     &__icon-container {
@@ -47,6 +84,10 @@
         right: 10%;
         transform: translateY(-50%);
         display: block;
+
+        @include respond-to('bigger-dev') {
+            display: none;
+        }
     }
 
     &__icon {
@@ -102,7 +143,6 @@
                 transform: rotate(45deg);
             }
         }
-
 
     }
 

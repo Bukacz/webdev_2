@@ -5,6 +5,11 @@
     background-size: cover;
     position: relative;
 
+    @include respond-to('bigger-dev') {
+        height: 100vh;
+        margin-top: 0;
+    }
+
     &__container {
         @include xCenter;
         top: 30%;

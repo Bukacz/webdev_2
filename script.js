@@ -18,13 +18,14 @@ for (let i = 0; i < anchor.length; i++) {
 };
 
 
+
+
 // JUMP TO SECTION 
 const list = document.querySelector('.navigation__list');
 list.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() === 'a') {
         const selectedItem = e.target.closest('li').classList.value;
         var id = selectedItem.slice(4);
-
     }
     const top = document.getElementById(id).offsetTop;
     window.scrollTo({
@@ -34,6 +35,24 @@ list.addEventListener('click', (e) => {
     nav.classList.remove('navigation__nav--active');
     burger.classList.remove('navigation__icon--active');
 })
+
+
+const sectionsOffset = [];
+const sections = document.querySelectorAll('section');
+for (let i = 0; i < sections.length; i++) {
+    sectionsOffset.push(sections[i].offsetTop);
+}
+console.log(sectionsOffset);
+console.log(sections);
+document.addEventListener('scroll', (e) => {
+    let y = window.scrollY;
+    console.log(y);
+});
+
+
+
+
+
 
 // SERVICES SECTION SLIDERS
 

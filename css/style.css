@@ -6,7 +6,8 @@ small-device : 600px / 16px = 37.5em,
 medium-device : 768px/16px = 48em,
 big-device : 900px/16px = 56.25em,
 bigger-device : 1024px/16px =  64em,
-large-device : 
+large-device : 1200px/16px = 75em,
+xtra-large-device : 1600px/16px = 100em
 
 
 */
@@ -137,6 +138,12 @@ a {
   font-size: 1.7rem;
   line-height: 2.5;
   padding-bottom: 1.8rem; }
+  @media screen and (min-width: 64em) {
+    .navigation__nav {
+      font-weight: 700; } }
+  @media screen and (min-width: 100em) {
+    .navigation__nav {
+      font-size: 2rem; } }
 
 .header__container {
   display: flex;
@@ -266,6 +273,10 @@ a {
   background: url(../../img/hero.png) no-repeat top;
   background-size: cover;
   position: relative; }
+  @media screen and (min-width: 64em) {
+    .hero {
+      height: 100vh;
+      margin-top: 0; } }
   .hero__container {
     position: absolute;
     left: 50%;
@@ -286,6 +297,10 @@ a {
   width: 100%;
   z-index: 9999;
   background-color: #ffffff; }
+  @media screen and (min-width: 64em) {
+    .navigation {
+      background-color: transparent;
+      overflow: visible; } }
   .navigation__logo-container {
     display: inline-block;
     position: relative;
@@ -306,12 +321,32 @@ a {
     opacity: 1;
     transition: .6s;
     /* navigation visible*/ }
+    @media screen and (min-width: 64em) {
+      .navigation__nav {
+        top: 0;
+        left: 40%;
+        padding-top: 2rem;
+        width: 56rem;
+        background-color: transparent; } }
+    @media screen and (min-width: 75em) {
+      .navigation__nav {
+        left: 50%; } }
+    @media screen and (min-width: 100em) {
+      .navigation__nav {
+        width: 65rem;
+        left: 55%; } }
     .navigation__nav--active {
       top: 6vh;
       opacity: 1; }
+  @media screen and (min-width: 64em) {
+    .navigation__list {
+      display: flex;
+      justify-content: space-between; } }
   .navigation__item:hover {
     color: #ff6033;
     cursor: pointer; }
+  .navigation__item--scrolled-to {
+    border-top: 3px solid #ff6033; }
   .navigation__icon-container {
     position: absolute;
     z-index: 3;
@@ -319,6 +354,9 @@ a {
     right: 10%;
     transform: translateY(-50%);
     display: block; }
+    @media screen and (min-width: 64em) {
+      .navigation__icon-container {
+        display: none; } }
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     display: flex;
     width: 3rem;
