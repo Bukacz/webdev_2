@@ -49,6 +49,8 @@ a {
         width: 90%;
         position: relative;
 
+
+
         @include respond-to('small-dev') {
             width: 85%;
         }
@@ -56,6 +58,7 @@ a {
         @include respond-to('medium-dev') {
             max-width: 57rem;
         }
+
     }
 
     &__subscribe {
@@ -100,6 +103,10 @@ a {
         font-weight: 900;
         font-size: 5rem;
         padding-bottom: 1.6rem;
+
+        @include respond-to('xtra-large-dev') {
+            font-size: 6rem;
+        }
     }
 
     &__secondary,
@@ -124,6 +131,15 @@ a {
         @include respond-to('medium-dev') {
             font-size: 6rem;
         }
+
+        @include respond-to('bigger-dev') {
+            font-size: 7rem;
+        }
+
+        @include respond-to('xtra-large-dev') {
+            font-size: 9rem;
+        }
+
     }
 
     &__tertiary {
@@ -161,6 +177,14 @@ a {
     &__subtext {
         padding: 0 0 3rem;
 
+        &--about {
+            text-align: center;
+
+            @include respond-to('bigger-dev') {
+                text-align: left;
+                padding-right: 5rem;
+            }
+        }
 
         &--centered {
             text-align: center;

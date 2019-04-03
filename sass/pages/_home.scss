@@ -3,8 +3,25 @@
     background-image: radial-gradient($color-section-about-first, $color-section-about-second);
     @include flexCenter;
     padding: 2rem 0 4rem;
+
+    @include respond-to('bigger-dev') {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
+.image {
+
+    &__content {
+
+        display: block;
+        width: 90%;
+
+        @include respond-to('bigger-dev') {
+            width: 56rem;
+        }
+    }
+}
 
 // -------------SECTION SERVICES-------------
 
@@ -12,6 +29,11 @@
     background-color: $color-section-services;
     @include flexCenter;
     padding: 2rem 0 4rem;
+
+
+    @include respond-to('bigger-dev') {
+        flex-direction: row-reverse;
+    }
 }
 
 .services {
@@ -30,9 +52,12 @@
             @include respond-to('medium-dev') {
                 max-width: 50rem;
             }
+
+            @include respond-to('bigger-dev') {
+                max-width: 46rem;
+            }
         }
     }
-
 
     &__list {
         position: relative;
@@ -87,11 +112,90 @@
 
 .gallery {
 
+    @include respond-to('bigger-dev') {
+        width: 70%;
+        max-width: 100rem;
+        display: grid;
+        grid-template-rows: 16vh 16vh 12vh 12vh;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1.5rem;
+    }
+
+    @include respond-to('large-dev') {
+        width: 65%;
+        max-width: 110rem;
+        display: grid;
+        grid-template-rows: 20vh 20vh 15vh 15vh;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 1.5rem;
+    }
+
+    @include respond-to('xtra-large-dev') {
+        grid-template-rows: 25vh 25vh 20vh 20vh;
+        grid-template-columns: repeat(6, 1fr);
+    }
+
     &__item {
         margin-bottom: 1rem;
 
         @include respond-to('small-dev') {
             margin-bottom: 3rem;
+        }
+
+        @include respond-to('bigger-dev') {
+            margin: 0;
+        }
+
+        &--1 {
+            @include respond-to('bigger-dev') {
+                grid-row: 1 / span 2;
+                grid-column: 1 / span 4;
+            }
+        }
+
+        &--2 {
+            @include respond-to('bigger-dev') {
+                grid-row: 1 / span 1;
+                grid-column: 5 / span 2;
+            }
+        }
+
+        &--3 {
+            @include respond-to('bigger-dev') {
+                grid-row: 2 / span 1;
+                grid-column: 5 / span 2;
+            }
+        }
+
+        &--4 {
+            @include respond-to('bigger-dev') {
+                grid-row: 3 / span 2;
+                grid-column: 1 / span 3;
+            }
+        }
+
+        &--5 {
+            @include respond-to('bigger-dev') {
+                grid-row: 3 / span 2;
+                grid-column: 4 / span 3;
+            }
+        }
+
+        &--6 {
+            @include respond-to('bigger-dev') {
+                float: left;
+                width: calc((100% - 1.5rem) / 2);
+                max-height: 25rem;
+                margin-right: 1.5rem;
+            }
+        }
+
+        &--7 {
+            @include respond-to('bigger-dev') {
+                float: left;
+                width: calc((100% - 1.5rem) / 2);
+                max-height: 25rem;
+            }
         }
     }
 
@@ -100,10 +204,29 @@
         width: 70%;
         margin: 0 auto;
         box-shadow: 0 1rem 2rem rgba($color-primary-dark, 0.3);
+
+        @include respond-to('bigger-dev') {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__wrapper {
         display: none;
+        font-size: 0;
+
+        @include respond-to('bigger-dev') {
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            width: 70%;
+        }
+
+        @include respond-to('large-dev') {
+            width: 65%;
+            max-width: 110rem;
+            margin-bottom: 12rem;
+        }
 
         &--active {
             display: block;
@@ -119,6 +242,14 @@
     padding: 6rem 4rem 4rem;
     background: url(../img/subscribe_bg.png) no-repeat center;
     background-size: cover;
+
+    @include respond-to('bigger-dev') {
+        padding: 10rem 5rem 6rem 5rem;
+    }
+
+    @include respond-to('large-dev') {
+        padding: 10rem 5rem;
+    }
 }
 
 .form {
@@ -177,7 +308,11 @@
     margin: 0 auto 2rem auto;
     width: 100%;
 
-
+    @include respond-to('bigger-dev') {
+        max-width: 110rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 
     @for $i from 1 through 3 {
 
@@ -215,6 +350,13 @@
         @include respond-to('medium-dev') {
             width: 60%;
             height: 40rem;
+        }
+
+        @include respond-to('bigger-dev') {
+            flex-basis: 30%;
+            max-width: 37rem;
+            height: 31rem;
+
         }
     }
 

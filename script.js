@@ -1,4 +1,5 @@
 // MENU 
+const navigation = document.querySelector('.navigation');
 const burger = document.querySelector(".navigation__icon");
 const nav = document.querySelector(".navigation__nav");
 burger.addEventListener('click', (e) => {
@@ -16,8 +17,6 @@ for (let i = 0; i < anchor.length; i++) {
         e.preventDefault();
     });
 };
-
-
 
 
 // JUMP TO SECTION 
@@ -42,16 +41,20 @@ const sections = document.querySelectorAll('section');
 for (let i = 0; i < sections.length; i++) {
     sectionsOffset.push(sections[i].offsetTop);
 }
-console.log(sectionsOffset);
-console.log(sections);
+
+
 document.addEventListener('scroll', (e) => {
     let y = window.scrollY;
-    console.log(y);
+    if (window.matchMedia('(min-width: 1024px)').matches) {
+        if (y > 100) {
+            navigation.style.backgroundColor = 'white';
+            nav.style.paddingTop = '1rem';
+        } else {
+            navigation.style.backgroundColor = 'transparent';
+            nav.style.paddingTop = '2rem';
+        }
+    }
 });
-
-
-
-
 
 
 // SERVICES SECTION SLIDERS

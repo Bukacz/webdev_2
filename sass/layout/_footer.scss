@@ -4,6 +4,12 @@
     padding: 6rem 0 4rem 0;
     text-align: center;
 
+    @include respond-to('bigger-dev') {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 3rem 0 2rem 0;
+    }
+
     &__container {
         padding-bottom: 1rem;
     }
