@@ -318,7 +318,7 @@
 
         .blog__post:nth-child(#{$i}) {
             .blog__post-container {
-                background-image: url(/img/blog_#{$i}.png);
+                background-image: url(../img/blog_#{$i}.png);
             }
         }
 
